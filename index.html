@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гаврикова 22.07.2019</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body onload="load()">
+    <div class="container">
+        <!--1. Условные операторы-->
+        <hr/>
+        <h4>Условные операторы</h4>
+        <hr/>
+        <!-- Задание 1.1 -->
+        <div>
+        <p class="paragraph">1. Если а – четное посчитать а*b, иначе а+b</p>
+        <form name="formTask1" action="">
+            <label>a = </label><input type="text" name="numberTask1_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+            <label>b = </label><input type="text" name="numberTask1_2" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+            <input type="button" class="btn btn-info" value="Посчитать" onclick="task1()"/>
+        </form>
+        <p>Результат: <span id="task1"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 1.2 -->
+        <div>
+            <p class="paragraph">2.	Определить в какой четверти принадлежит точка с координатами (х,у)</p>
+            <form name="formTask2" action="">
+                <label>x = </label><input type="text" name="numberTask2_1" placeholder="Введите координату х" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>y = </label><input type="text" name="numberTask2_2" placeholder="Введите координату у" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Определить" onclick="task2()"/>
+            </form>
+            <p>Результат: <span id="task2"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 1.3 -->
+        <div>
+            <p class="paragraph">3.	Найти суммы только положительных из трех чисел</p>
+            <form name="formTask3" action="">
+                <label>a = </label><input type="text" name="numberTask3_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>b = </label><input type="text" name="numberTask3_2" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>с = </label><input type="text" name="numberTask3_3" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Вычеслить" onclick="task3()"/>
+            </form>
+            <p>Результат: <span id="task3"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 1.4 -->
+        <div>
+            <p class="paragraph">4.	Посчитать выражение max(а*b*с, а+b+с)+3</p>
+            <form name="formTask4" action="">
+                <label>a = </label><input type="text" name="numberTask4_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>b = </label><input type="text" name="numberTask4_2" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>с = </label><input type="text" name="numberTask4_3" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Вычеслить" onclick="task4()"/>
+            </form>
+            <p>Результат: <span id="task4"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 1.5 -->
+        <div>
+            <p class="paragraph">5.	Написать программу определения оценки студента по его рейтингу, на основе следующих правил
+            </p>
+            <form name="formTask5" action="">
+                <label>Введите рейтинг студента (от 0 до 100): </label><input type="text" name="numberTask5_1" placeholder="Введите рейтинг" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Оценка" onclick="task5()"/>
+            </form>
+            <p>Оценка студента: <span id="task5"></span></p>
+        </div>
+        <hr/>
+        <!--2. Циклы -->
+        <h4>Циклы</h4>
+        <hr/>
+        <!-- Задание 2.1 -->
+        <div>
+            <p class="paragraph">1.	Найти сумму четных чисел и их количество в диапазоне от 0 до 99</p>
+            <input type="button" class="btn btn-info" value="Найти" onclick="task2_1()"/>
+            <p>Сумма четных чисел от 0 до 99 = <span id="task2_1_sum"></span></p>
+            <p>Количество четных чисел от 0 до 99 = <span id="task2_1_count"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 2.2 -->
+        <div>
+            <p class="paragraph">2.	Проверить простое ли число? </p>
+            <form name="formTask2_2" action="">
+                <label>Введите число: </label><input type="text" name="numberTask2_2_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Проверить" onclick="task2_2()"/>
+            </form>
+            <p>Ответ: <span id="task2_2"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 2.3 -->
+        <div>
+            <p class="paragraph">3.	Найти корень натурального числа с точностью до целого  </p>
+            <form name="formTask2_3" action="">
+                <label>Введите число больше нуля: </label><input type="text" name="numberTask2_3_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9]/, '')"/>
+                <input type="button" class="btn btn-info" value="Найти подбором" onclick="task2_3_1()"/>
+                <input type="button" class="btn btn-info" value="Найти бинарным поиском" onclick="task2_3_2()"/>
+            </form>
+            <p>Результат последовательным подбором: <span id="task2_3_1"></span></p>
+            <p>Результат бинарным поиском: <span id="task2_3_2"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 2.4 -->
+        <div>
+            <p class="paragraph">4.	Вычислить факториал числа n  </p>
+            <form name="formTask2_4" action="">
+                <label>Введите число : </label><input type="text" name="numberTask2_4_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Вычеслить" onclick="task2_4()"/>
+            </form>
+            <p>Факториал веденного числа: <span id="task2_4"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 2.5 -->
+        <div>
+            <p class="paragraph">5.	Посчитать сумму цифр заданного числа  </p>
+            <form name="formTask2_5" action="">
+                <label>Введите многозначное число : </label><input type="text" name="numberTask2_5_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Вычеслить" onclick="task2_5()"/>
+            </form>
+            <p>Сумма цифр: <span id="task2_5"></span></p>
+        </div>
+        <hr/>
+        <!-- Задание 2.6 -->
+        <div>
+            <p class="paragraph">6.	Вывести число, которое является зеркальным отображением последовательности цифр заданного числа  </p>
+            <form name="formTask2_6" action="">
+                <label>Введите многозначное число : </label><input type="text" name="numberTask2_6_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Вычеслить" onclick="task2_6()"/>
+            </form>
+            <p>Зеркальное число: <span id="task2_6"></span></p>
+        </div>
+        <hr/>
+        <!-- 3. Одномерные массивы -->
+        <h4>Одномерные массивы</h4>
+        <hr/>
+        <!-- Задание 3.1 -->
+        <div>
+            <p class="paragraph">1.	Одномерный целочисленный массив  </p>
+            <form name="formTask3_1" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив" onclick="task3_1()"/>
+            </form>
+            <p>Массив: <span id="array"></span></p>
+            <p>Минимальный элемент массива: <span id="min_element"></span></p>
+            <p>Максимальный элемент массива: <span id="max_element"></span></p>
+            <p>Индекс минимального элемента массива: <span id="index_min"></span></p>
+            <p>Индекс максимального элемента массива: <span id="index_max"></span></p>
+            <p>Сумма элементов массива с нечетными индексами: <span id="sum_odd"></span></p>
+            <p>Количество нечетных элементов массива: <span id="count_odd"></span></p>
+            <p>Реверс массива: <span id="revers"></span></p>
+            <p>Замена местами первой и второй половины массива: <span id="change_array"></span></p>
+
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Bubble  </p>
+            <form name="formTask3_1_1" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="bubble()"/>
+            </form>
+            <p>Массив: <span id="array_bubble"></span></p>
+            <p>Сортировка пузырьком Bubble: <span id="sort_bubble"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Select  </p>
+            <form name="formTask3_1_2" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_2" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="select_sort()"/>
+            </form>
+            <p>Массив: <span id="array_select"></span></p>
+            <p>Сортировка выбором Select: <span id="sort_select"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Insert  </p>
+            <form name="formTask3_1_3" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_3" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="insert_sort()"/>
+            </form>
+            <p>Массив: <span id="array_insert"></span></p>
+            <p>Сортировка вставками Insert: <span id="sort_insert"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Quick  </p>
+            <form name="formTask3_1_4" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_4" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="quick_sort()"/>
+            </form>
+            <p>Массив: <span id="array_quick"></span></p>
+            <p>Сортировка методом Quick: <span id="sort_quick"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Merge  </p>
+            <form name="formTask3_1_5" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_5" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="merge_sort()"/>
+            </form>
+            <p>Массив: <span id="array_merge"></span></p>
+            <p>Сортировка методом Merge: <span id="sort_merge"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Шелла  </p>
+            <form name="formTask3_1_6" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_6" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="shell_sort()"/>
+            </form>
+            <p>Массив: <span id="array_shell"></span></p>
+            <p>Сортировка методом Шелла: <span id="sort_shell"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">Сортировка одномерного целочисленного массива методом Heap  </p>
+            <form name="formTask3_1_7" action="">
+                <label>Введите количество элементов массива : </label><input type="text" name="numberTask3_1_7" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Сформировать массив и отсортировать" onclick="heap_sort()"/>
+            </form>
+            <p>Массив: <span id="array_heap"></span></p>
+            <p>Сортировка методом Heap: <span id="sort_heap"></span></p>
+        </div>
+        <hr/>
+        <h4>Функции</h4>
+        <hr/>
+        <div>
+            <p class="paragraph">1.	Получить строковое название дня недели по номеру дня  </p>
+            <form name="formTask4_1" action="">
+                <label>Введите номер дня недели: </label><input type="text" name="numberTask4_1" placeholder="Введите число" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Показать" onclick="day_of_week()"/>
+            </form>
+            <p>День недели: <span id="day"></span></p>
+        </div>
+        <hr/>
+        <div>
+            <p class="paragraph">2.	Найти расстояние между двумя точками в двухмерном декартовом пространстве. </p>
+            <form name="formTask4_2" action="">
+                <label>X1: </label><input type="text" name="numberTask4_2_1" placeholder="Введите координату х" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>Y1: </label><input type="text" name="numberTask4_2_2" placeholder="Введите координату у" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>X2: </label><input type="text" name="numberTask4_2_3" placeholder="Введите координату х" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <label>Y2: </label><input type="text" name="numberTask4_2_4" placeholder="Введите координату у" onkeyup="this.value = this.value.replace (/[^0-9-]/, '')"/>
+                <input type="button" class="btn btn-info" value="Вычеслить" onclick="distance()"/>
+            </form>
+            <p>Расстояние между точками: <span id="distance"></span></p>
+        </div>
+        <hr/>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
